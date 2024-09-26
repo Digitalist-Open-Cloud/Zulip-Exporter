@@ -1,11 +1,9 @@
 import zulip
-import json
 import logging
 from os import environ
 from sys import exit
 from time import sleep
 from prometheus_client import start_http_server, REGISTRY
-from prometheus_client.core import GaugeMetricFamily, CounterMetricFamily
 from zulip_exporter import InfoCollector
 from zulip_exporter import UserCollector
 from zulip_exporter import SubscriptionCollector
