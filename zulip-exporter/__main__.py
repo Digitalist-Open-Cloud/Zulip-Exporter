@@ -8,7 +8,7 @@ from prometheus_client import start_http_server, REGISTRY
 from prometheus_client.core import GaugeMetricFamily, CounterMetricFamily
 
 
-httpport = environ.get('HPORT', 9863)
+httpport = environ.get('PORT', 9863)
 frequency = environ.get('SLEEP', 120)
 client = zulip.Client()
 
@@ -45,7 +45,7 @@ class UserCollector(object):
 
 class SubscriptionCollector(object):
     def collect(self):
-        r = json.loads(json.dumps(client.list_subscriptions()))
+        r = json.loads(json.dumps(client.get_subscriptions()))
         yield CounterMetricFamily('zulip_stream', 'Total Streams', value=(len(r['subscriptions'])))
         for x in r['subscriptions']:
           for k, v in x.items():

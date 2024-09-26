@@ -2,9 +2,8 @@
 
 ## Usage
 
-- Create a bot following this documentation: <https://zulip.com/api/api-keys>
+- Start exporter
 
-- Add the bot in each streams that you want to be exported
 
 ### Environment variable
 
@@ -13,7 +12,7 @@
 |         `ZULIP_EMAIL`        | Zulip email from zuliprc                                       |           |    ✅    |
 |        `ZULIP_API_KEY`       | Zulip api-key from zuliprc                                     |           |    ✅    |
 |          `ZULIP_SITE`        | URL where your Zulip server is located                         |           |    ✅    |
-|            `HPORT`           | Http port to listen on                                         |  `9863`   |    ❌    |
+|            `PORT`            | Http port to listen on                                         |  `9863`   |    ❌    |
 |            `SLEEP`           | Time to wait in seconds beetween metric grabbing cycles        |  `120`    |    ❌    |
 
 ## Docker compose example
@@ -55,12 +54,3 @@ see [rules examples](./kubernetes/zulip-rules.yaml)
 
 see [example dashboard](./grafana/dashboard.json)
 
-## Todo
-
-- [ ] When this <https://github.com/zulip/zulip/pull/17038> will be merged check if new metrics can be obtained from administrator privilegies.
-
-## Questions
-
-**Q:** Why you did this?
-
-**A:** 🤷‍♂️
