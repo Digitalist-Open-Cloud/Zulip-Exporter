@@ -54,3 +54,15 @@ see [rules examples](./kubernetes/zulip-rules.yaml)
 
 see [example dashboard](./grafana/dashboard.json)
 
+## Development
+
+### Setup
+
+- poetry install
+- poetry run python3 zulip-exporter
+
+### Publish
+
+- poetry install
+- poetry build
+- poetry publish
