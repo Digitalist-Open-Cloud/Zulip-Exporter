@@ -1,4 +1,4 @@
 _zuliprc
 .venv
 dist
-zulip-exporter/__pycache__/
+zulip_exporter/__pycache__/
