@@ -1,6 +1,6 @@
 import json
 import zulip
-from prometheus_client.core import GaugeMetricFamily, CounterMetricFamily
+from prometheus_client.core import CounterMetricFamily
 
 client = zulip.Client()
 

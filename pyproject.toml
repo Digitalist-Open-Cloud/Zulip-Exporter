@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "zulip-exporter"
-version = "0.0.6"
+version = "0.0.8"
 description = "A Zulip exporter for Prometheus"
 authors = ["Mikke Schirén <mikke.schiren@digitalist.com>"]
 license = "MIT"

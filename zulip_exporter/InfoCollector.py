@@ -1,4 +1,4 @@
-from prometheus_client.core import GaugeMetricFamily, CounterMetricFamily
+from prometheus_client.core import GaugeMetricFamily
 import json
 import zulip
 

@@ -2,3 +2,5 @@ _zuliprc
 .venv
 dist
 zulip_exporter/__pycache__/
+local.md
+

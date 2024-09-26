@@ -1,9 +1,16 @@
-# Zulip prom exporter
+# Zulip prometheus exporter
 
-## Usage
+This is based on the work by [brokenpip3](https://github.com/brokenpip3) in [zulip-exporter](https://github.com/brokenpip3/zulip-exporter)
 
-- Start exporter
+## Installation
 
+`pip3 install zulip-exporter`
+
+Or
+
+`pipx install git+https://github.com/Digitalist-Open-Cloud/Zulip-Exporter.git`
+
+Or use the docker image (prefered)
 
 ### Environment variable
 
@@ -13,11 +20,29 @@
 |        `ZULIP_API_KEY`       | Zulip api-key from zuliprc                                     |           |    ✅    |
 |          `ZULIP_SITE`        | URL where your Zulip server is located                         |           |    ✅    |
 |            `PORT`            | Http port to listen on                                         |  `9863`   |    ❌    |
-|            `SLEEP`           | Time to wait in seconds beetween metric grabbing cycles        |  `120`    |    ❌    |
+|            `SLEEP`           | Time to wait in seconds between metric grabbing cycles        |  `120`    |    ❌    |
+
+
+## Usage
+
+To use the Zulip exporter, you first need to set the environment variables.
+
+When just start the exporter, like:
+
+```sh
+zulip-exporter
+```
+
+Or run with docker image, like:
+
+```sh
+docker run --rm -p 9863:9863 -e ZULIP_SITE=https://my.zulip.site -e ZULIP_API_KEY=secretAPIkey -e ZULIP_EMAIL=user@myzulip.com  docker.io/digitalist/zulip-exporter
+```
+
 
 ## Docker compose example
 
-```
+```yaml
   zulip-exporter:
     container_name: zulip-exporter
     restart: unless-stopped
