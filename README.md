@@ -6,11 +6,11 @@ This is based on the work by [brokenpip3](https://github.com/brokenpip3) in [zul
 
 `pip3 install zulip-exporter`
 
-Or
+Or (latest from main branch)
 
 `pipx install git+https://github.com/Digitalist-Open-Cloud/Zulip-Exporter.git`
 
-Or use the docker image (prefered)
+Or use the [docker image](https://hub.docker.com/repository/docker/digitalist/zulip-exporter/general) (preferred).
 
 ### Environment variable
 

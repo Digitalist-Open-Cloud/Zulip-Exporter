@@ -21,7 +21,7 @@ spec:
         app: zulip-exporter
     spec:
       containers:
-        - image: docker.io/digitalist/zulip-exporter:0.0.8
+        - image: docker.io/digitalist/zulip-exporter:0.0.9
           name: zulip-exporter
           env:
           - name: ZULIP_EMAIL
