@@ -46,7 +46,7 @@ docker run --rm -p 9863:9863 -e ZULIP_SITE=https://my.zulip.site -e ZULIP_API_KE
   zulip-exporter:
     container_name: zulip-exporter
     restart: unless-stopped
-    image: quay.io/brokenpip3/zulip-exporter:0.0.1
+    image: docker.io/digitalist/zulip-exporter
     labels:
       io.prometheus.scrape: true
       io.prometheus.port: 9863
